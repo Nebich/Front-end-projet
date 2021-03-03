@@ -14,6 +14,20 @@
   align-items: center;
   padding: 3vh;
   font-size: 10px;
+
+  @include large {
+    @for $i from 1 through 7 {
+      &[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
+
+    @for $i from 1 through 18 {
+      &[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+  }
 }
 
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
