@@ -4,56 +4,12 @@ main
         p zvuihvuqgvi givzigvizgacvzhachzahivhzfizfzyiyiizhiahcizxuiahh uicga
     
     section.equipage 
-        - var luffy = {"name":"Luffy", "text":"le personnage principal nommé Monkey D. Luffy", "url":"/assets/img/luffy.png", "alt": "le personnage principal nommé Monkey D. Luffy"};
+        - var characters = [{"name":"Luffy", "text":"le personnage principal nommé Monkey D. Luffy", "url":"/assets/img/luffy.png", "alt": "le personnage principal nommé Monkey D. Luffy"}, {"name":"Zoro", "text":"Même avec une boussole je me perds tout le temps.", "url":"/assets/img/roronoa-zoro.jpg", "alt": "Son premier coéquipier le sabreur Roronoa Zoro"},{"name":"Nami", "text":"La navigatrice accro à l'or ", "url":"/assets/img/nami.jpg", "alt": "La navigatrice de l'équipage Nami"},{"name":"Usopp", "text":"Le tireur d'élite froussard", "url":"/assets/img/usopp.jpg", "alt": "Le tireur d'élite de l'équipage Usopp"},{"name":"Sanji", "text":"Le cuisinie à la jambe de feu qui aime les femmes", "url":"/assets/img/Sanji.jpg", "alt": "Le cuisinier de l'équipage Sanji"},{"name":"Chopper", "text":"Le médecin de l'équipage", "url":"/assets/img/Chopper.png", "alt": "Le médecin de l'équipage Chopper"},{"name":"Robin", "text":"L'archéologue", "url":"/assets/img/Robin.jpg", "alt": "La source d'infos de l'équipage Robin"},{"name":"Franky", "text":"Le menuisier robot en caleçon", "url":"/assets/img/Franky.jpg", "alt": "Le menuisier de l'équipage Franky"},{"name":"Brook", "text":"Le musicien squelette", "url":"/assets/img/brook.jpg", "alt": "Le musicien squelette de l'équipage Brook"}];
 
-        each info, key in luffy 
-            h3 info
-            p info
-            img(src=info alt=info)
-
-        article.luffy 
-            img(src="/assets/img/luffy.png" alt="le personnage principal nommé Monkey D. Luffy")
-            h3 Luffy
-            p Je mange beaucoup.
-
-        article.zoro 
-            img(src="/assets/img/roronoa-zoro.jpg" alt ="Son premier coéquipier le sabreur Roronoa Zoro")
-            h3 Zoro 
-            p Même avec une boussole je me perds tout le temps.
-
-        article.nami
-            img(src="/assets/img/nami.jpg" alt ="La navigatrice de l'équipage Nami")
-            h3 Nami 
-            p La navigatrice accro à l'or 
-
-        article.usopp 
-            img(src="/assets/img/usopp.jpg" alt ="Le tireur d'élite de l'équipage Usopp")
-            h3 Usopp 
-            p Le tireur d'élite froussard
-
-        article.sanji 
-            img(src="/assets/img/Sanji.jpg" alt ="Le cuisinier de l'équipage Sanji")
-            h3 Sanji 
-            p Le cuisinie à la jambe de feu qui aime les femmes
-
-        article.chopper 
-            img(src="/assets/img/Chopper.png" alt ="Le médecin de l'équipage Chopper")
-            h3 Chopper 
-            p Le médecin de l'équipage
-        
-        article.robin 
-            img(src="/assets/img/Robin.jpg" alt ="La source d'infos de l'équipage Robin")
-            h3 Robin 
-            p L'archéologue
-        
-        article.franky 
-            img(src="/assets/img/Franky.jpg" alt ="Le menuisier de l'équipage Franky")
-            h3 Franky 
-            p Le menuisier robot en caleçon
-
-        article.brook 
-            img(src="/assets/img/brook.jpg" alt ="Le musicien squelette de l'équipage Brook")
-            h3 Brook 
-            p Le musicien squelette
+        each character in characters
+            article
+                h3 #{character.name}
+                p #{character.text}
+                img(src=character.url alt=character.alt).profil
 
         
