@@ -4,13 +4,12 @@ main
         p zvuihvuqgvi givzigvizgacvzhachzahivhzfizfzyiyiizhiahcizxuiahh uicga
     
     section.equipage 
-        - var values = ["luffy" : { "src ": "/assets/img/luffy.png", "alt":"le personnage principal nommé Monkey D. Luffy", "name": "Luffy", "txt" :"Je mange beaucoup"}];
-        
-        each val in values
-            artcile.val 
-                img(src=val.url alt=val.alt)
-                h3 val.name 
-                p val.name
+        - var luffy = {"name":"Luffy", "text":"le personnage principal nommé Monkey D. Luffy", "url":"/assets/img/luffy.png", "alt": "le personnage principal nommé Monkey D. Luffy"};
+
+        each info, key in luffy 
+            h3 info
+            p info
+            img(src=info alt=info)
 
         article.luffy 
             img(src="/assets/img/luffy.png" alt="le personnage principal nommé Monkey D. Luffy")
