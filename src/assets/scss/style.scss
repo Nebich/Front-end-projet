@@ -1,0 +1,274 @@
+@import "reset.scss";
+
+html {
+  font-size: 10px;
+}
+
+section {
+  min-height: 100vh;
+  width: 99vw;
+  position: relative;
+}
+@font-face {
+  font-family: "Title";
+  src: url("./../fonts/Katanf.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Para";
+  src: url("./../fonts/Hiroshio.otf") format("opentype");
+}
+
+$sizePara: 2rem;
+$sizeTitle: 3.5rem;
+$sizeWelcome: 7rem;
+$purple: #a38fff;
+$mainColor: #32a5fc;
+$darkBlue: #195380;
+$lightBlue: #7ec6fd;
+$white: white;
+$red: #fc2e17;
+$lightGreen: #bfffc1;
+$yellow: #fff894;
+$lightRed: #ff7a5c;
+$darkGreen: #2f8239;
+$veryLightBlue: #bffffc;
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99.5vw;
+  min-height: 100px;
+  display: flex;
+  background-color: $lightBlue;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.header__logo {
+  width: auto;
+  height: 10vh;
+  padding: 2vh;
+}
+
+.header__menu {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-size: $sizeTitle;
+  color: $white;
+  font-family: "Para";
+  margin-left: 8vw;
+}
+
+/* Welcome */
+
+.welcome {
+  background-image: url("./../img/bg-welcome.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome__message {
+  font-size: $sizeWelcome;
+  color: $white;
+  font-family: "Title";
+  text-shadow: #000000 3px 3px, #000000 -3px 3px, #000000 -3px -3px,
+    #000000 3px -3px;
+}
+
+.arrow {
+  border: solid $darkBlue;
+  border-width: 0 20px 20px 0;
+  display: inline-block;
+  padding: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  color: white;
+  font-size: $sizeWelcome;
+  position: absolute;
+  bottom: 10vh;
+  right: 49vw;
+}
+
+/* Teaser */
+
+.teaser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vh;
+}
+
+.teaser__illustration {
+  height: 80vh;
+  width: auto;
+}
+
+.teaser__text {
+  width: 60vw;
+  font-size: $sizeTitle;
+  padding-bottom: 40vh;
+  font-family: "Para";
+}
+
+/* Equipage */
+
+.equipage {
+  text-align: center;
+  font-size: $sizeWelcome;
+  padding-top: 15vh;
+}
+
+.equipage__title {
+  font-family: "Title";
+  text-shadow: #000000 3px 3px, #000000 -3px 3px, #000000 -3px -3px,
+    #000000 3px -3px;
+  font-size: $sizeWelcome;
+  color: $red;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  justify-items: center;
+}
+
+.equipage__profil {
+  height: 20vw;
+  width: auto;
+}
+
+.equipage__card {
+  width: 20vw;
+  min-width: 275px;
+  height: 50vh;
+  min-height: 390px;
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &:nth-child(1) .top {
+    background: $red;
+  }
+  &:nth-child(2) .top {
+    background: $lightGreen;
+  }
+  &:nth-child(3) .top {
+    background: $lightBlue;
+  }
+  &:nth-child(4) .top {
+    background: $darkGreen;
+  }
+  &:nth-child(5) .top {
+    background: $yellow;
+  }
+  &:nth-child(6) .top {
+    background: $veryLightBlue;
+  }
+  &:nth-child(7) .top {
+    background: $purple;
+  }
+  &:nth-child(8) .top {
+    background: $lightRed;
+  }
+  &:nth-child(9) .top {
+    background: $darkBlue;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .equipage__card {
+    width: 100vw;
+    min-height: 400px;
+    height: 400px;
+    float: none;
+    overflow: clip;
+  }
+}
+
+.wrap {
+  height: 20vh;
+  width: 20vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+
+  &:hover {
+    transition: all 0.8 ease;
+    box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  //pointer-events: none;
+
+  .top {
+    height: 235px;
+    width: 100%;
+    background: grey;
+    overflow: hidden;
+    //pointer-events: none;
+  }
+
+  .bottom {
+    pointer-events: none;
+    width: 100%;
+    min-height: 115px;
+    background: #f2f3f7;
+    box-sizing: border-box;
+    padding: 12px 28px;
+
+    .title {
+      text-transform: uppercase;
+      font-size: $sizeTitle;
+      font-family: "Title";
+      margin-bottom: 8px;
+    }
+    .name {
+      font-size: $sizePara;
+      font-family: "Para";
+    }
+  }
+}
+
+/* Footer */
+
+.footer {
+  width: 99vw;
+  min-height: 100px;
+  display: flex;
+  background-color: $lightBlue;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
+}
+
+.footer__credit {
+  font-size: $sizePara;
+  color: $white;
+  font-family: "Para";
+}

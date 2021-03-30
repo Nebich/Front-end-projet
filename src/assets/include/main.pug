@@ -1,15 +1,31 @@
-main 
-    section.teaser
-        h2 Teasing
-        p zvuihvuqgvi givzigvizgacvzhachzahivhzfizfzyiyiizhiahcizxuiahh uicga
-    
-    section.equipage 
-        - var characters = [{"name":"Luffy", "text":"le personnage principal nommé Monkey D. Luffy", "url":"/assets/img/luffy.png", "alt": "le personnage principal nommé Monkey D. Luffy"}, {"name":"Zoro", "text":"Même avec une boussole je me perds tout le temps.", "url":"/assets/img/roronoa-zoro.jpg", "alt": "Son premier coéquipier le sabreur Roronoa Zoro"},{"name":"Nami", "text":"La navigatrice accro à l'or ", "url":"/assets/img/nami.jpg", "alt": "La navigatrice de l'équipage Nami"},{"name":"Usopp", "text":"Le tireur d'élite froussard", "url":"/assets/img/usopp.jpg", "alt": "Le tireur d'élite de l'équipage Usopp"},{"name":"Sanji", "text":"Le cuisinie à la jambe de feu qui aime les femmes", "url":"/assets/img/Sanji.jpg", "alt": "Le cuisinier de l'équipage Sanji"},{"name":"Chopper", "text":"Le médecin de l'équipage", "url":"/assets/img/Chopper.png", "alt": "Le médecin de l'équipage Chopper"},{"name":"Robin", "text":"L'archéologue", "url":"/assets/img/Robin.jpg", "alt": "La source d'infos de l'équipage Robin"},{"name":"Franky", "text":"Le menuisier robot en caleçon", "url":"/assets/img/Franky.jpg", "alt": "Le menuisier de l'équipage Franky"},{"name":"Brook", "text":"Le musicien squelette", "url":"/assets/img/brook.jpg", "alt": "Le musicien squelette de l'équipage Brook"}];
+main
+    section.welcome#welcome 
+            h1.welcome__message Découvre l'équipage !
+            a(href='#teaser')
+                i.arrow
 
-        each character in characters
-            article
-                h3 #{character.name}
-                p #{character.text}
-                img(src=character.url alt=character.alt).profil
+    section.teaser#teaser
+        img(src='assets/img/luffy-teaser.png').teaser__illustration
+        p.teaser__text Hey, c'est moi Luffy ! Le jeune garçon qui rêve de devenir le Roi des Pirates en trouvant le One Piece, le trésor ultime rassemblé par Gol D. Roger, le seul pirate à avoir jamais porté le titre de Roi des Pirates. Shanks le Roux est mon modèle depuis qu'il m'a sauvé la vie. Un jour, j'ai mangé un fruit bizarre ce qui a fait de moi un homme-caoutchouc ! C'est trop cool je suis élastique maintenant ! Shanks m'a donné son chapeau de paille, je ne dois lui rendre que lorsqu'il sera devenu le roi des pirates. Des années plus tard, je vais partir de mon village pour me constituer un équipage et trouver le One Piece ! le roi des pirates ce sera moi !
+        a(href='#equipage')
+                i.arrow
+
+    section.equipage#equipage 
+        - var characters = [{"name":"Monkey D. Luffy", "text":"C'est moi le personnage principal de cette aventure ! Le D. de mon nom est une grande énigme et fais de moi quelqu'un de spécial. Je suis le capitaine de l'équipage que j'ai appelé 'Les chapeaux de paille' comme celui que Shanks m'a donné !", "url":"/assets/img/luffy.png", "alt": "le personnage principal nommé Monkey D. Luffy"}, {"name":"Zoro", "text":"Je suis le premier à rejoindre l'équipage. Je détestais les pirates jusqu'à rencontrer Luffy. Je suis un ex-chasseur de pirates qui deviendra le meilleur sabreur du monde !", "url":"/assets/img/roronoa-zoro.png", "alt": "Son premier coéquipier le sabreur Roronoa Zoro"},{"name":"Nami", "text":"Mon surnom est 'La chatte voleuse', j'ai trahi l'équipage une fois pour régler mes dettes mais au final Luffy est venu me sauver d'un homme poisson dénommé Arlong qui voulait me voler mon argent. Maintenant j'avance aux côtés de Luffy et je compte faire une carte du monde entier !", "url":"/assets/img/nami.png", "alt": "La navigatrice de l'équipage Nami"},{"name":"Usopp", "text":"Mon père fait partie de l'équipage de Shanks Le Roux, j'avais moi-même un petit groupe de moussailons sur mon île. Puis j'ai rencontré Luffy et il m'a filé un bon coup de main du coup j'ai rejoint son équipage et je compte devenir le meilleur tireur d'élite !", "url":"/assets/img/usopp.png", "alt": "Le tireur d'élite de l'équipage Usopp"},{"name":"Sanji", "text":"J'ai commencé à cuisiner dans un bateau restaurant appelé 'Baratie', mon mentor est Zeff aux pieds rouges un ancien pirate, il m'a tout appris pour ce qui est de la cuisine ainsi que mon style de combat.", "url":"/assets/img/Sanji.png", "alt": "Le cuisinier de l'équipage Sanji"},{"name":"Tony Tony Chopper", "text":"Je suis un renne ! Et non pas un raton-laveur comme beaucoup le dise.. J'ai la plus petite prime de l'équipage.. En revanche je vais devenir le meilleur médecin du monde ! Mon mentor était l'un des meilleurs médecins du monde entier !", "url":"/assets/img/Chopper.png", "alt": "Le médecin de l'équipage Chopper"},{"name":"Nico Robin", "text":"Je suis recherché depuis mes 8 ans, je passe mon temps à me cacher, j'en suis devenir une experte. On me considère comme le dernier démon d'Ohara une île qui a été détruite brutalement.. Je sais lire les ponéglyphes et je peux être très utile à l'équipage !", "url":"/assets/img/Robin.png", "alt": "La source d'infos de l'équipage Robin"},{"name":"Franky", "text":"J'ai commencé par être l'élève d'un grand menuisier à Water 7 l'île des menuisiers. J'ai ensuite créée la Franky Family un gang de démonteurs de bateaux ! On s'éclatait bien mais Luffy est venu nous mettre des bâtons dans les roues ! Finalement c'est un ec plutôt cool donc je l'ai rejoint.", "url":"/assets/img/Franky.png", "alt": "Le menuisier de l'équipage Franky"},{"name":"Brook", "text":"Yohohoho ! Je suis un le fantôme de l'équipe, j'oublie souvent que je ne suis qu'un squelette ! Pourrais-tu me montrer ta culotte ? Excuse-moi c'est une fâcheuse habitude que j'ai ! Je suis le musicien du groupe !", "url":"/assets/img/brook.png", "alt": "Le musicien squelette de l'équipage Brook"}];
+        h2.equipage__title L'équipage !
+        .container
+            each character in characters
+                    .equipage__card
+                        .wrap
+                            .card
+                                .top
+                                    img(src=character.url alt=character.alt).equipage__profil
+                                .bottom
+                                    .title 
+                                        h2.equipage__name #{character.name}
+                                    .name
+                                        p.equipage__description #{character.text}
+
+    
 
         
